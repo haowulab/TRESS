@@ -26,7 +26,7 @@ From GitHub:
 ```r
 install.packages("devtools") # if you have not installed "devtools" package
 library(devtools)
-install_github("https://github.com/ZhenxingGuo0015/TRESS", build_vignettes = TRUE)
+install_github("https://github.com/haowulab/TRESS", build_vignettes = TRUE)
 ```
 
 To view the package vignette in HTML format, run the following lines in R
@@ -52,9 +52,11 @@ For illustration purpose, we include four example BAM files
 and one corresponding genome annotation file in 
 our publicly available data package ``datasetTRES``on github, 
 which can be installed with
-```{r, eval= FALSE}
+
+```r
 install_github("https://github.com/ZhenxingGuo0015/datasetTRES")
 ```
+
 The BAM files contain sequencing reads (only on chromosome 19) 
 from two input \& IP mouse brain cerebellum samples.
 Given both BAM and annotation files, 
@@ -88,6 +90,7 @@ head(peaks[, -c(5, 14, 15)], 3)
 ```
 
 To replace the example BAM files with your BAM files, the codes are:
+
 ```{r, eval=FALSE}
 ## or, take BAM files from your path
 Input.file = c("input_rep1.bam", "input_rep2.bam")
